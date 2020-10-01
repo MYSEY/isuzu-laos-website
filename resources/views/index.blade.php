@@ -12,8 +12,6 @@
     <title>{{__('index_lang.nav_all_new_isuzu_dmax')}}</title>
 
 
-
-
     <!-- JQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
 
@@ -71,24 +69,17 @@
 
 </head>
 <body class="{!! app()->getLocale(); !!}">
-
     <div id="d-container">
-
         @include('global_parts.global_mobile_nav')
         @include('global_parts.desktop_nav')
         @include('index.banner_image')
-
         @include('index.index_car_between_one')
-{{--        @include('index.global_car_between_one')--}}
         @include('index.index_car_between_two')
         @include('index.index_car_between_three')
-{{--        @include('index.global_car_between_three')--}}
-{{--        @include('index.global_car_between_four')--}}
         @include('index.index_car_between_four')
         @include('index.billboard')
         @include('index.interest')
         @include('global_parts.margin_bottom')
-
     </div>
 
     <script defer src="{{asset('storage/scripts/global_scripts/global_desktop_nav_script.js')}}"></script>
@@ -100,11 +91,7 @@
     </script>
     <!-- End AOS Library -->
 
-    <script src="{{asset('storage/libraries/big_picture/BigPicture.min.js')}}"></script>
-
-
 </body>
 </html>
-
 
 <!--Dalang Ly-->

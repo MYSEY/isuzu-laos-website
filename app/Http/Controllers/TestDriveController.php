@@ -27,7 +27,8 @@ class TestDriveController extends Controller
         $data['dcheckbox1'] = $request->dcheckbox1;
         $data['dradio'] = $request->dradio;
 
-        Mail::to(['dalangly@gmail.com', 'leaphea@oxygenkh.com'])->send(new TestDriveMail($data));
+        //Mail::to(['panharith@oxygenkh.com','dalang@oxygenkh.com', 'leaphea@oxygenkh.com', 'a_pisutthida@tripetch-isuzu.co.th'])->send(new TestDriveMail($data));
+        Mail::to(['dalangly@gmail.com'])->send(new TestDriveMail($data));
 
         Alert::success('Sent!', "We appreciate you contacting Isuzu Laos. One of our colleagues will get back in touch with you soon! Have a great day!");
         return back();

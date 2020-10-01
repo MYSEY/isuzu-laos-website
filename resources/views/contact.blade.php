@@ -14,9 +14,6 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <!-- JQuery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
-
     <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pushbar.js@1.0.0/src/pushbar.min.css"/>
 
     <link href="{{asset('storage/libraries/hamburger/hamburgers.min.css')}}" rel="stylesheet">
@@ -71,23 +68,14 @@
 
 </head>
 <body class="{!! app()->getLocale(); !!}">
-
-
     <div id="d-container">
-
         @include('global_parts.global_mobile_nav')
         @include('global_parts.desktop_nav')
         @include('contact.contact_image')
         @include('contact.contact_form')
-
     </div>
 
     <script defer src="{{asset('storage/scripts/global_scripts/global_desktop_nav_script.js')}}"></script>
-
-    <script src="{{asset('storage/libraries/big_picture/BigPicture.min.js')}}"></script>
-
-
-
 </body>
 </html>
 <!--Dalang Ly-->

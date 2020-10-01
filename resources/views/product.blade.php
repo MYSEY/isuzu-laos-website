@@ -69,10 +69,7 @@
 
 </head>
 <body class="{!! app()->getLocale(); !!}">
-
-
     <div id="d-container">
-
         @include('global_parts.global_mobile_nav')
         @include('global_parts.desktop_nav')
         @include('product.product_banner')
@@ -80,7 +77,6 @@
         @include('product.car_model_item_two')
         @include('product.car_model_item_three')
         @include('product.car_model_item_four')
-
     </div>
 
     <script defer src="{{asset('storage/scripts/global_scripts/global_desktop_nav_script.js')}}"></script>
@@ -91,9 +87,6 @@
         AOS.init();
     </script>
     <!-- End AOS Library -->
-
-    <script src="{{asset('storage/libraries/big_picture/BigPicture.min.js')}}"></script>
-
 </body>
 </html>
 <!--Dalang Ly-->

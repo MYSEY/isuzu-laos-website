@@ -61,27 +61,16 @@
 
     <link rel="stylesheet" href="{{asset('storage/styles/global_styles/global_desktop_nav_style.css')}}">
     <link rel="stylesheet" href="{{asset('storage/styles/global_styles/global_mobile_nav_style.css')}}">
-
 </head>
 <body class="{!! app()->getLocale(); !!}">
-
-
     <div id="d-container">
-
         @include('global_parts.global_mobile_nav')
         @include('global_parts.desktop_nav')
         @include('test_drive.test_drive_image')
         @include('test_drive/test_drive')
-
     </div>
 
-
-    <script defer src="{{asset('storage/scripts/test_drive_scripts/test_drive_script.js')}}"></script>
     <script defer src="{{asset('storage/scripts/global_scripts/global_desktop_nav_script.js')}}"></script>
-
-    <script src="{{asset('storage/libraries/big_picture/BigPicture.min.js')}}"></script>
-
-
 </body>
 </html>
 <!--Dalang Ly-->
