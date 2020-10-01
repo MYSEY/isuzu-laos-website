@@ -1,7 +1,7 @@
 <div class="d-banner-image">
 
     <div class="d-banner-image-section">
-        <img class="d-banner-image-desktop" src="{{asset('storage/images/home/BANNER-2.png')}}" alt="">
+        <img class="d-banner-image-desktop" src="{{asset('storage/images/home/BANNER-2.jpg')}}" alt="">
         <img class="d-banner-image-mobile" src="{{asset('storage/images/home/mobile.jpg')}}" alt="">
     </div>
 
