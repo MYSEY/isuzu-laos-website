@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Mail\TestDriveMail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
+use Kreait\Firebase\Factory;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class TestDriveController extends Controller
@@ -32,5 +33,17 @@ class TestDriveController extends Controller
 
         Alert::success('Sent!', "We appreciate you contacting Isuzu Laos. One of our colleagues will get back in touch with you soon! Have a great day!");
         return back();
+    }
+
+    public function show(){
+        $firebase = (new Factory)
+            ->withServiceAccount(__DIR__.'/dsys-721ca-05894e5e8fd8.json')
+            ->withDatabaseUri('https://dsys-721ca.firebaseio.com/')
+            ->createDatabase();
+
+        $database = $firebase->getReference('isuzu/test_drive');
+        foreach ($database->getSnapshot()->getValue() as $item){
+            dd($item);
+        }
     }
 }

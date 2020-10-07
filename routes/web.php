@@ -20,6 +20,8 @@ Route::get('/', function(){
     return view('origin');
 });
 
+Route::get('/print', 'TestDriveController@show')->name('print');
+
 //Route::get('/test-drive', function () {
 //    return redirect('/en/test-drive');
 //});

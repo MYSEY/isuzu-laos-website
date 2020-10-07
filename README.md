@@ -15,6 +15,9 @@
 - composer require laravel/ui:^2.4
 - php artisan ui vue --auth
 - npm install
+- composer require kreait/firebase-php
+- composer require kreait/laravel-firebase
+- php artisan vendor:publish --provider="Kreait\Laravel\Firebase\ServiceProvider" --tag=config
 
 ## About Laravel
 

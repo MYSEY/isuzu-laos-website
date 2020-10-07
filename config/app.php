@@ -179,6 +179,8 @@ return [
         * Package Service Providers...
         */
         RealRashid\SweetAlert\SweetAlertServiceProvider::class,
+
+        Kreait\Laravel\Firebase\ServiceProvider::class
     ],
 
     /*
