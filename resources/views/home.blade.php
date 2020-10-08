@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-12">
             <div class="card">
                 <div class="card-header">{{ __('Dashboard') }}</div>
 
@@ -14,23 +14,23 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
 
 
 
+                        <div class="d-flex justify-content-between align-items-center my-4">
+                            <h5># Test Drive</h5>
+                            <a href="{{route('print')}}" class="btn btn-primary">Export Excel</a>
+                        </div>
 
 
-
-
-
-                        <h5># Users</h5>
-                        <a href="{{route('print')}}" class="btn btn-primary">Print</a>
                         <table class="table table-bordered">
                             <tr>
-                                <th>Name</th>
-                                <th>Surname</th>
-                                <th>Cars</th>
-                                <th>Showrooms</th>
+                                <th class="align-middle">Name</th>
+                                <th class="align-middle">Surname</th>
+                                <th class="align-middle">Tel</th>
+                                <th class="align-middle">Email</th>
+                                <th class="align-middle">Cars</th>
+                                <th class="align-middle">Showrooms</th>
                             </tr>
                             <tbody id="tbody">
                             </tbody>
@@ -85,10 +85,12 @@ https://firebase.google.com/docs/web/setup#available-libraries -->
         $.each(value, function (index, value) {
             if (value) {
                 htmls.push('<tr>\
-<td>' + value.name + '</td>\
-<td>' + value.surname + '</td>\
-<td>' + value.cars + '</td>\
-<td>' + value.showrooms + '</td>\
+<td class="align-middle">' + value.name + '</td>\
+<td class="align-middle">' + value.surname + '</td>\
+<td class="align-middle">' + value.tel + '</td>\
+<td class="align-middle">' + value.email + '</td>\
+<td class="align-middle">' + value.cars + '</td>\
+<td class="align-middle">' + value.showrooms + '</td>\
 </tr>');
             }
             lastIndex = index;

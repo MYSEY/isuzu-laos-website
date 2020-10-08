@@ -18,6 +18,8 @@
 - composer require kreait/firebase-php
 - composer require kreait/laravel-firebase
 - php artisan vendor:publish --provider="Kreait\Laravel\Firebase\ServiceProvider" --tag=config
+- composer require maatwebsite/excel
+- php artisan vendor:publish --provider="Maatwebsite\Excel\ExcelServiceProvider"
 
 ## About Laravel
 
