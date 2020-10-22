@@ -30,12 +30,12 @@ class TestDriveController extends Controller
         $data['dcheckbox1'] = $request->dcheckbox1;
         $data['dradio'] = $request->dradio;
 
-        //Mail::to(['panharith@oxygenkh.com','dalang@oxygenkh.com', 'leaphea@oxygenkh.com', 'a_pisutthida@tripetch-isuzu.co.th'])->send(new TestDriveMail($data));
+        //Mail::to(['panharith@oxygenkh.com','dalang@oxygenkh.com', 'leaphea@oxygenkh.com', 'a_pisutthida@tripetch-isuzu.co.th', 'support@myisuzulaos.com', 'k_chayanit@tripetch-isuzu.co.th'])->send(new TestDriveMail($data));
         Mail::to(['dalangly@gmail.com'])->send(new TestDriveMail($data));
 
         $firebase = (new Factory)
-            ->withServiceAccount(__DIR__.'/dsys-721ca-05894e5e8fd8.json')
-            ->withDatabaseUri('https://dsys-721ca.firebaseio.com/')
+            ->withServiceAccount(__DIR__.'/isuzulaos-d32b5-33e03354df04.json')
+            ->withDatabaseUri('https://isuzulaos-d32b5.firebaseio.com/')
             ->createDatabase();
 
         $cars = null;
@@ -62,8 +62,8 @@ class TestDriveController extends Controller
 
     public function export(){
         $firebase = (new Factory)
-            ->withServiceAccount(__DIR__.'/dsys-721ca-05894e5e8fd8.json')
-            ->withDatabaseUri('https://dsys-721ca.firebaseio.com/')
+            ->withServiceAccount(__DIR__.'/isuzulaos-d32b5-33e03354df04.json')
+            ->withDatabaseUri('https://isuzulaos-d32b5.firebaseio.com/')
             ->createDatabase();
 
         $database = $firebase->getReference('isuzu/test_drive');

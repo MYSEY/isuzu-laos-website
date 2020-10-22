@@ -23,7 +23,7 @@ class ContactController extends Controller
         $data['subject'] = $request->subject;
         $data['message'] = $request->message;
 
-        //Mail::to(['panharith@oxygenkh.com','dalang@oxygenkh.com', 'leaphea@oxygenkh.com', 'a_pisutthida@tripetch-isuzu.co.th'])->send(new ContactMail($data));
+        //Mail::to(['panharith@oxygenkh.com','dalang@oxygenkh.com', 'leaphea@oxygenkh.com', 'a_pisutthida@tripetch-isuzu.co.th', 'support@myisuzulaos.com'])->send(new ContactMail($data));
         Mail::to(['dalangly@gmail.com'])->send(new ContactMail($data));
 
         Alert::success('Sent!', "We appreciate you contacting Isuzu Laos. One of our colleagues will get back in touch with you soon! Have a great day!");

@@ -23,7 +23,7 @@ Route::get('/print', 'TestDriveController@export')->name('print');
 
 Auth::routes();
 
-Route::get('/admin', 'HomeController@index')->name('admin');
+Route::get('/{language}/admin', 'HomeController@index')->name('admin');
 
 Route::redirect('/register', '/laos');//redirect homepage to /en
 
