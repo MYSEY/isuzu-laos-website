@@ -14,9 +14,6 @@
                         </div>
                     @endif
 
-
-
-
                         <div class="d-flex justify-content-between align-items-center my-4">
                             <h5># Test Drive</h5>
                             <a href="{{route('print')}}" class="btn btn-primary">Export Excel</a>
@@ -35,19 +32,6 @@
                             <tbody id="tbody">
                             </tbody>
                         </table>
-
-
-
-
-
-
-
-
-
-
-
-
-
                 </div>
             </div>
         </div>
@@ -85,13 +69,13 @@ https://firebase.google.com/docs/web/setup#available-libraries -->
         $.each(value, function (index, value) {
             if (value) {
                 htmls.push('<tr>\
-<td class="align-middle">' + value.name + '</td>\
-<td class="align-middle">' + value.surname + '</td>\
-<td class="align-middle">' + value.tel + '</td>\
-<td class="align-middle">' + value.email + '</td>\
-<td class="align-middle">' + value.cars + '</td>\
-<td class="align-middle">' + value.showrooms + '</td>\
-</tr>');
+                                <td class="align-middle">' + value.name + '</td>\
+                                <td class="align-middle">' + value.surname + '</td>\
+                                <td class="align-middle">' + value.tel + '</td>\
+                                <td class="align-middle">' + value.email + '</td>\
+                                <td class="align-middle">' + value.cars + '</td>\
+                                <td class="align-middle">' + value.showrooms + '</td>\
+                            </tr>');
             }
             lastIndex = index;
         });

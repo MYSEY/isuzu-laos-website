@@ -16,8 +16,6 @@
         <p style="margin-top: 90px; text-align: center">Send from <a href="http://www.myisuzulaos.com/">Isuzu Laos</a></p>
     </div>
 
-
-
 </div>
 
 <style>
